@@ -173,8 +173,11 @@
     margin-left: 0;
     list-style: none;
 
-    > li {
+/**    > li {
         margin-bottom: $spacing-unit;
+    } */
+    .post-meta {
+        float:right;
     }
 }
 
@@ -184,10 +187,14 @@
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+    
+    font-size: 16px;
+    color: black;
 }
 
+.post-link:visited {
+    color: black;
+}
 
 
 /**
@@ -233,4 +240,10 @@
             font-size: 18px;
         }
     }
+}
+
+.rss-subscribe {
+    border-top: black;
+    border-top-style: solid;
+    font-size: 12px;
 }
