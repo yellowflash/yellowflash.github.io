@@ -68,7 +68,7 @@ Now we define numbers similarly. If `n` is a number the most useful operation is
 
 `.`
 
-<pre><code>n: λf.λx.f<sup>n</sup>x</code></pre>
+<code>n: λf.λx.f<sup>n</sup>x</code>
 
 *Note : Applications are left associative by default so `ffx` means `(ff)x` and not `f(fx)`.*
 
