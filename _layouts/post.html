@@ -3,7 +3,17 @@ layout: default
 ---
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  },
+  styles: {
+   ".MathJax" : {
+       "background-color": "#eef",
+       "border": "1px solid #e8e8e8 !important",
+       "border-radius": "3px",
+       "padding": "1px 5px !important"
+    }
+  }
 });
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
