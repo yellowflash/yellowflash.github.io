@@ -17,16 +17,16 @@ For example., $A \wedge B$ is satisfiable with assignment `A=TRUE` and `B=TRUE`,
 
 Any proposition which isnt satisfiable is *inconsistent* and Any proposition which is satisfiable with every assignment is *tautology*. For example., $\neg A \vee A$ is a tautology. As we can see negation of any inconsistent proposition is a tautology and vice versa.
 
-To verify something is satisfiable or tautology is simple if we deal with it semantically by applying every possible assignment of boolean values to variables and find whether its satisfiable or tautology  (but if you consider complexity its hard).
+To verify something is satisfiable or tautology is simple if we deal with it semantically by applying every possible assignment of boolean values to variables and find whether it's tautology  (but if you consider complexity its hard).
 
-But if we consider *first order logic* we cannot verify a statement as `TRUE` or `FALSE` this way. So what we do is a method of derivation in those cases. By encoding the semantics of the system as set of axioms (or axiom schemas to be more accurate), and have an inference mechanism to derive all the truth statements. We call that a *proof*.
+But if we consider *first order logic* we cannot verify a statement as `TRUE` or `FALSE` this way. So what we do is a method of derivation by encoding the semantics of the system as set of axioms (or axiom schemas to be more accurate), along with an inference mechanism to derive the truth statements. We call that a *proof*.
 
 Hilbert System
 --------------
 
-Since propositional logic is simpler we would start doing the same here. [Hilbert](https://en.wikipedia.org/wiki/David_Hilbert) defined a set of axiom schemas for the propositional logic. But he didnt use `AND` and `OR` connectives. He used an operation called `IMPLICATION`, denoted with $\rightarrow$. For example., $X \rightarrow Y$ which informally means *If X is TRUE then Y is TRUE*.
+Since propositional logic is simpler we would start finding truth statements by derivation from axioms. [Hilbert](https://en.wikipedia.org/wiki/David_Hilbert) defined a set of axiom schemas for the propositional logic. But he didnt use `AND` and `OR` connectives. He used an operation called `IMPLICATION`, denoted with $\rightarrow$. For example., $X \rightarrow Y$ which informally means *If X is TRUE then Y is TRUE*.
 
-Any proposition on $\wedge , \vee, \neg$ could be expressed with $\rightarrow , \neg$ (Its easier to prove that by simply expressing `AND`, `OR` with `IMPLICATION` and `NOT`) and vice versa., since $A \rightarrow B \equiv (\neg A \vee B)$
+Any proposition on $\wedge , \vee, \neg$ could be expressed with $\rightarrow , \neg$ (It is easier to prove that by simply expressing `AND`, `OR` with `IMPLICATION` and `NOT`) and vice versa., since $A \rightarrow B \equiv (\neg A \vee B)$
 
 
 Now given $A$, $B$ and $C$ be any atomic propositions.
@@ -75,7 +75,7 @@ For instance the first two Hilbert's Axioms are nothing but types of `K` and `S`
 
 And *Modes Ponens* inference rule is nothing but function application.
 
-The last one is tricky, its basically *Proof by contradiction* which can be used to prove *Law of excluded middle*. Constructive mathematics on which this isomorphism relies on doesnt allow it (Would talk more about it in seperate post). Without the negation and the last axiom, the reduced propositional logic is called *Positive implicational logic*.
+The last one is tricky, it's basically *Proof by contradiction* which can be used to prove *Law of excluded middle*. Constructive mathematics on which this isomorphism relies on doesnt allow it (Would talk more about it in seperate post). Without the negation and the last axiom, the reduced propositional logic is called *Positive implicational logic*.
 
 Hence existence of a lambda function itself is a proof of the proposition, since lambda calculus is equivalent to `SKI` combinatory logic. Where
 
