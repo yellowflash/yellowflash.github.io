@@ -14,12 +14,12 @@ Its simpler to think of the reduction order as either to evaluate arguments firs
 
 Applicative order of evaluation is strict evaluation where every argument, even if its not being used would get evaluated. But normal order doesnt evaluate arguments in case there are no usages of arguments.
 
-Consider the example $(\lambda x.y)((\lambda x.xx)(\lambda x.xx))$ would never terminate in applicative order of evaluation but while executed with normal order would give the result $y$.
+Consider the example $(\lambda x.y)((\lambda x.xx)(\lambda x.xx))$ would never terminate in applicative order of evaluation but when executed with normal order would give the result $y$.
 
 Lazy evaluation
 ---------------
 
-But the problem with normal order evaluation is there are times the argument might be executed multiple times, which the applicative order evaluation completely avoids. So in-order to get the best of both worlds we need to delay the evaluation until its being used and evaluate only once. This mode of evaluation is called as *lazy* evaluation.
+But the problem with normal order evaluation is there are times the argument might get executed multiple times, which the applicative order evaluation completely avoids. So in-order to get the best of both worlds we need to delay the evaluation until its being used and evaluate only once. This mode of evaluation is called as *lazy* evaluation.
 
 Every expression that need to be executed in the lazy evaluation is represented as *thunk*. Thunk contains the lambda expression and the bindings for all the variables that are in scope. 
 
@@ -57,12 +57,12 @@ case class Application(fn: Expression, arg: Expression) extends Expression {
 
 {% endhighlight %}
 
-There are two problems here, First a minor one where consider the case of $(\lambda x. \lambda y. x)(\lambda x. y)$, gets evaluated to $\lambda y. (\lambda x. y)$. Thats not a problem, since internally it knows they are two different $y$s, once we report unbound variables we can fix that.
+There are two problems here. First a minor one, consider the case of $(\lambda x. \lambda y. x)(\lambda x. y)$, gets evaluated to $\lambda y. (\lambda x. y)$. Thats not a problem, since internally it knows they are two different $y$s, once we report unbound variables we can fix that.
 
-The next one is more around garbage collection of bindings. We keep accumulating bindings. And most of them aren't of any use inside the expression anyways. We should capture only those that are free inside the bound expression.
+The next one is more around garbage collection of bindings. We keep accumulating bindings. And most of them aren't of any use inside the expression anyway. We should capture only those that are free inside the bound expression.
 
 
 Other approaches
 ----------------
 
-As we see the free variable conflicts are the ones that almost always make the execution tricky. There are alternate approaches to do the execution. One of them is to rewrite terms with [DeBrujin Indices](), where instead of naming the variables we use the positions. Another approach is to use combinatory logic, like in [Miranda](). The combinators in combinatory logic gets rid of this whole notion of free variables and bound variables completely by using a fixed set of combinators. Both the approaches removes variable names, so the debuggability is lost in some sense. 
+As we see the free variable conflicts are the ones that almost always make the execution tricky. There are alternate approaches to do the execution. One of them is to rewrite terms with [De-Bruijn Index](https://en.wikipedia.org/wiki/De_Bruijn_index), where instead of naming the variables we use the positions. Another approach is to use combinatory logic, like in [Miranda](). The combinators in combinatory logic gets rid of this whole notion of free variables and bound variables completely by using a fixed set of combinators. Both the approaches removes variable names, so the debuggability is lost in some sense. 

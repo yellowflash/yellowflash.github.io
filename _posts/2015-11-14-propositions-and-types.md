@@ -29,7 +29,7 @@ Since propositional logic is simpler we would start finding truth statements by 
 Any proposition on $\wedge , \vee, \neg$ could be expressed with $\rightarrow , \neg$ (It is easier to prove that by simply expressing `AND`, `OR` with `IMPLICATION` and `NOT`) and vice versa., since $A \rightarrow B \equiv (\neg A \vee B)$
 
 
-Now given $A$, $B$ and $C$ be any atomic propositions.
+Now given $A$, $B$ and $C$ be any propositions.
 
 - $A \rightarrow (B \rightarrow A)$
 - $(A \rightarrow (B \rightarrow C)) \rightarrow (A \rightarrow B) \rightarrow (A \rightarrow C)$
