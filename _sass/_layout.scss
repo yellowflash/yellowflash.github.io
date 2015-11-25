@@ -1,3 +1,6 @@
+$site-background: #e1e1e1;
+$white-color: #ffffff;
+
 /**
  * Site header
  */
@@ -163,6 +166,12 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    background-coloe: $site-background;
+}
+
+.wrapper {
+    padding-top: 25px;
+    background-color: $white-color;
 }
 
 .page-heading {

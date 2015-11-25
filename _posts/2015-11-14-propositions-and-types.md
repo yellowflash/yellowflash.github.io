@@ -80,6 +80,6 @@ The existence of a lambda function itself is a proof of the proposition, since l
 
 $I = \lambda x.x$
 
-$I$ has type $A \rightarrow A$ and we proved it as a tautology expressible through other axioms and our proof is nothing but $I \equiv SKK$ ie., application of *Modes Ponens* to the *Modes Ponens* of *Axiom 2* and *Axiom 1* with *Axiom 1* again.
+$I$ has type $A \rightarrow A$ and we proved it as a tautology expressible through	 other axioms and our proof is nothing but $I \equiv SKK$ ie., application of *Modes Ponens* to the *Modes Ponens* of *Axiom 2* and *Axiom 1* with *Axiom 1* again.
 
 Hence when we are programming most of the times we are actually proving something in Propositional Logic :) .
