@@ -22,7 +22,7 @@ For example: The equivalent expression for $$(SKK)K$$ is simple $$((\lambda x. \
 Lambda to SKI
 -------------
 
-This side of the equivalence is bit tricky. The primary problem with SKI is that it doesnt allow unbound occurences of variables, the expressions in SKI have to be expressions like in programming languages. Every variable has to be bound. This restriction not necessarily reduce the expressibility in any way.
+This side of the equivalence is bit tricky. The primary problem with SKI is that it doesnt allow unbound occurences of variables, the expressions in SKI have to be expressions like in programming languages. Infact the final expression we build would have no variables at all. This restriction not necessarily reduce the expressibility in any way.
 
 We will do a step by step procedure with induction on the structure of lambda expression. Lets call that procedure `convert`
 
