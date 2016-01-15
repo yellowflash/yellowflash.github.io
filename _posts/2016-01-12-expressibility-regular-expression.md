@@ -28,7 +28,7 @@ So any set of string which doesnt have this property is regular. For example, $b
 Pumping lemma
 -------------
 
-This is the fool proof way to say whether a particular language is regular or not. Formally, pumping lemma states that if there is always a way to partition any string in a regular language of length more than some $p$ as $$xyz$$ such that $$xy^nz$$ also belongs to the language, where $len(y) \ge 1$ and $len(xy) \le p$ . 
+This is the fool proof way to say whether a particular language is regular or not. Formally, pumping lemma states that if there is always a way to partition any string in a regular language of length more than some $p$ as $$xyz$$ such that $$xy^nz$$ also belongs to the language, where $len(y) \ge 1$ and $len(xy) \le p$ and $$n \ge 0$$. 
 
 Some examples.
 
