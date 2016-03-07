@@ -46,7 +46,7 @@ Lets call `E = \q.(\x. .... q ...)`, then the definition of `P` will be like
 
 Now we can use `Y` as
 
-`let P = Y((\q. (\x. .... q ...)))`
+`let P = Y(\q. (\x. .... q ...))`
 
 that removes the recursive usage of `P` in the definition of P 
 
