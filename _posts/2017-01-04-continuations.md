@@ -1,5 +1,5 @@
 ---
-title: Continuations in Scala
+title: Continuations
 layout: post
 ---
 
